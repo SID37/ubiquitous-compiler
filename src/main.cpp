@@ -1,9 +1,15 @@
-#include "test.h"
-
 #include <iostream>
 
-int main()
+namespace N 
 {
-    std::cout << "hello cpp world" << std::endl;
-    test_f();
+    int i = 4;
+    extern int j;
+}
+
+int i = 2;
+int N::j = i;
+
+int main()
+{ 
+    std::cout << N::j << std::endl;
 }
