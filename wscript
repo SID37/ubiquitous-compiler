@@ -10,5 +10,5 @@ def configure(conf):
 def build(bld):
         bld.program(
                 source=bld.path.ant_glob('src/**/*.cpp'),
-                target='test',
+                target='slime',
                 includes='headers')

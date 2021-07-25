@@ -1,15 +1,10 @@
+#include "parser.h"
 #include <iostream>
+#include <fstream>
 
-namespace N 
+int main(int argc, char** argv)
 {
-    int i = 4;
-    extern int j;
-}
-
-int i = 2;
-int N::j = i;
-
-int main()
-{ 
-    std::cout << N::j << std::endl;
+    std::vector<Slime::Slarray> v{0x41, 0x42, 0x43};
+    Slime::Slarray data(v);
+    std::cout << data.PrettyPrint() << std::endl;
 }
